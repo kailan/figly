@@ -26,10 +26,20 @@ function mapCommand(cmd: Fastly.Command): Fig.Subcommand {
 }
 
 function mapFlag(flag: Fastly.Flag): Fig.Option {
-  return {
+  let opt = {
     name: `--${flag.name}`,
-    description: flag.description
+    description: flag.description,
+    args: []
+  };
+
+  if (flag.default || flag.required || flag.placeholder) {
+    opt.args.push({
+      name: flag.name,
+      isOptional: !flag.required
+    });
   }
+
+  return opt;
 }
 
 import fs from "fs";
