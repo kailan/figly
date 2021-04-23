@@ -1,0 +1,15 @@
+{
+    "name": "figly",
+    "version": "1.0.0",
+    "description": "Fig Autocomplete generator for Fastly CLI",
+    "scripts": {
+        "generate": "yarn run ts-node src/generate.ts"
+    },
+    "author": "Kailan Blanks <kailan@enviark.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^14.14.41",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.4"
+    }
+}
