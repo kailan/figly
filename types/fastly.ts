@@ -9,6 +9,7 @@ export interface Flag {
   placeholder: string;
   required: boolean;
   default: string;
+  isBool: boolean;
 }
 
 export interface Command {
