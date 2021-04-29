@@ -36,8 +36,7 @@ function mapFlag(flag: Fastly.Flag): Fig.Option {
 
   if (!flag.isBool || flag.default || flag.required) {
     opt.args.push({
-      name: flag.name,
-      isOptional: !flag.required
+      name: flag.name
     });
   }
 
